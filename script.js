@@ -62,10 +62,14 @@ function handleSearch() {
             "ServiceID": "Test123"
         });
 
-        // Add a small delay to allow the UI to render before launching
-        setTimeout(() => {
-            embeddedservice_bootstrap.utilAPI.launchChat();
-        }, 100); // 100-millisecond delay
+      // Instead of calling launchChat(), find the button and click it.
+        const chatButton = document.getElementById('chatButton');
+        if (chatButton) {
+            chatButton.click();
+        } else {
+            console.error('[Launch Error] The #chatButton element could not be found in the DOM.');
+        }
+		
     } else {
         alert('Please enter a search query!');
     }
