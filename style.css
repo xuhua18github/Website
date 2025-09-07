@@ -117,3 +117,7 @@ h1 {
 #embeddedMessagingConversationButton {
     display: none;
 }
+
+#chatButton {
+    display: none;
+}
