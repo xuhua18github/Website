@@ -62,7 +62,10 @@ function handleSearch() {
             "ServiceID": "Test123"
         });
 
-        embeddedservice_bootstrap.utilAPI.launchChat();//launch the prechat or chat window automatically
+        // Add a small delay to allow the UI to render before launching
+        setTimeout(() => {
+            embeddedservice_bootstrap.utilAPI.launchChat();
+        }, 100); // 100-millisecond delay
     } else {
         alert('Please enter a search query!');
     }
