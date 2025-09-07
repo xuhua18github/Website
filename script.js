@@ -1,5 +1,10 @@
 function initEmbeddedMessaging() {
     try {
+		 // Add a timeout to check for failure
+        const initTimeout = setTimeout(() => {
+            console.error('[Salesforce Chat] Initialization failed: The "onEmbeddedMessagingReady" event was not received within 10 seconds.');
+        }, 10000); // 10-second timeout
+		
         window.embeddedservice_bootstrap.settings.language = 'en_US';
         embeddedservice_bootstrap.settings.enableUserInputForConversationWithBot = false;
         window.embeddedservice_bootstrap.init(
@@ -10,6 +15,15 @@ function initEmbeddedMessaging() {
 				scrt2URL: 'https://huaxu-241209-309-demo.my.salesforce-scrt.com'
 			}
         );
+		// Listen for the success event
+        window.addEventListener("onEmbeddedMessagingReady", () => {
+            console.log("[Salesforce Chat] Initialization successful. The client is ready.");
+            clearTimeout(initTimeout); // Clear the failure timeout
+            
+            // Set the target element *after* initialization is confirmed
+            embeddedservice_bootstrap.settings.targetElement = document.body.querySelector("#embeddedMessagingContainer");
+        });
+		
     } catch (err) {
         console.error('Error loading Embedded Messaging: ', err);
     }
