@@ -100,7 +100,7 @@
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">&copy; 2025 Agentforce2. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 Agentforce3. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-gray-300">Privacy Policy</a>
                     <a href="#" class="hover:text-gray-300">Terms of Service</a>
@@ -109,6 +109,7 @@
         </div>
     </footer>
 
+	
     <!-- ADDED THE SCRIPT TO LAUNCH THE CHAT -->
    <script type='text/javascript'>
         function launchChat() {
@@ -132,6 +133,7 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = false;
 
 			embeddedservice_bootstrap.init(
 				'00DGA000009nelv',
