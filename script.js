@@ -33,7 +33,8 @@ window.addEventListener("onEmbeddedMessagingReady", () => {
     embeddedservice_bootstrap.settings.targetElement = document.body.querySelector("#embeddedMessagingContainer");
 });
 
-// Handle search button click
+//Not using handleSearch() for now
+//Handle search button click
 var query;
 
 function handleSearch() {
@@ -73,6 +74,23 @@ function handleSearch() {
     } else {
         alert('Please enter a search query!');
     }
+}
+
+// NEW: Add this function from the Salesforce example.
+function launchChat() {
+    // First, get the user's query from the input field.
+    query = document.getElementById('queryInput').value;
+
+    embeddedservice_bootstrap.utilAPI.launchChat()
+        .then(() => {
+            console.log("Chat client launched successfully.");
+            // Optional: disable the button after launch
+            document.getElementById('launchChatButton').disabled = true;
+        }).catch((error) => {
+            console.error("Chat client failed to launch.", error);
+        }).finally(() => {
+            console.log("Attempted to launch chat.");
+        });
 }
 
 window.addEventListener("onEmbeddedMessagingConversationParticipantChanged", (event) => {
