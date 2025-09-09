@@ -1,65 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<body class="bg-gray-50 text-gray-800">
-
-    <!-- Main Content (Hero Section) -->
-    <main class="gradient-bg">
-        <div class="container mx-auto px-6 py-24 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                Supercharge Your Support with AI Chat
-            </h1>
-            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
-                Agentforce provides an intelligent, automated platform to resolve customer issues faster and improve satisfaction.
-            </p>
-            <div class="mt-10">
-                <!-- ADDED THIS BUTTON TO LAUNCH THE CHAT -->
-                <button id="launchChatButton" onclick="launchChat()">Contact Support</button>
-            </div>
-        </div>
-    </main>
-
-	
-    <!-- ADDED THE SCRIPT TO LAUNCH THE CHAT -->
-   <script type='text/javascript'>
-        function launchChat() {
-            embeddedservice_bootstrap.utilAPI.launchChat()
-                .then(() => {
-                    // Success handler: This runs when the chat launches successfully.
-                    console.log('Chat client launched successfully.');
-                    // For example, disable the button to prevent multiple clicks.
-                    document.getElementById('launchChatButton').disabled = true;
-                }).catch((error) => {
-                    // Error handler: This runs if the chat client fails to launch.
-                    console.error('Error launching chat: ', error);
-                }).finally(() => {
-                    // Finally handler: This runs regardless of success or failure.
-                    console.log('Attempted to launch chat.');
-                });
-        }
-    </script>
-
-    <script type='text/javascript'>
-	function initEmbeddedMessaging() {
-		try {
-			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
-			embeddedservice_bootstrap.settings.hideChatButtonOnLoad = false;
-
-			embeddedservice_bootstrap.init(
-				'00DGA000009nelv',
-				'Best_Auto_Service_Agent',
-				'https://huaxu-241209-309-demo.my.site.com/ESWBestAutoServiceAgen1747888067155',
-				{
-					scrt2URL: 'https://huaxu-241209-309-demo.my.salesforce-scrt.com'
-				}
-			);
-		} catch (err) {
-			console.error('Error loading Embedded Messaging: ', err);
-		}
-	};
-    </script>
-    <script type='text/javascript' src='https://huaxu-241209-309-demo.my.site.com/ESWBestAutoServiceAgen1747888067155/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-    
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>My Simple Website to test Agentforce deployment to an external website.</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <header>
+ <h1>Welcome to My Website</h1>
+ </header>
+ <section>
+ <p>This is a test website.</p>
+ </section>
+ <footer>
+ <p>Contact: myemail@example.com</p>
+ </footer>
+ <script type='text/javascript'>
+ function initEmbeddedMessaging() {
+ try {
+ embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+ embeddedservice_bootstrap.init(
+ '00DKd000006mBkT',
+ 'SDO_Messaging_for_Web',
+ 'https://amyerwin-241117-595-demo.my.site.com/ESWSDOMessagingforWeb1731865188511',
+ {
+ scrt2URL: 'https://amyerwin-241117-595-demo.my.salesforce-scrt.com'
+ }
+ );
+ }
+ catch (err) {
+ console.error('Error loading Embedded Messaging: ', err);
+ }
+ };
+ </script>
+ <script type='text/javascript' src='https://amyerwin-241117-595-demo.my.site.com/ESWSDOMessagingforWeb1731865188511/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 </body>
-</html>
-
