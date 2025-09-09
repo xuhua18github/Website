@@ -1,36 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agentforce Help</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <a href="#">Help</a>
-            <a href="#">Ask Agentforce</a>
-            <a href="#">Product Documentation</a>
-            <a href="#">Trailhead Learning</a>
-            <a href="#">My Cases</a>
-            <button class="contact-support">Contact Support</button>
-        </nav>
-    </header>
-    <main>
-        <div class="hero">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
-            <h1>How can <span class="brand">Agentforce</span> help?</h1>
-            <div class="search-bar">
-                <input id="queryInput" type="text" placeholder='Ask questions like "How do I reset my password?"'>
-                <button class="search-btn" onclick="handleSearch()">🔍</button>
-            </div>
+<main>
+    <div class="hero">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q-tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
+        <h1>How can <span class="brand">Agentforce</span> help?</h1>
+        <div class="search-bar">
+            <input id="queryInput" type="text" placeholder='Ask questions like "How do I reset my password?"'>
+            <button class="search-btn">🔍</button>
         </div>
-        <button id="chatButton"></button>
-        <!-- Embedded Messaging Container -->
-        <div id="embeddedMessagingContainer" class="chat-modal"></div>
-    </main>
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="https://huaxu-241209-309-demo.my.site.com/ESWBestAutoServiceAgen1747888067155/assets/js/bootstrap.min.js" onload="initEmbeddedMessaging()"></script>
-</body>
-</html>
+        
+        <button id="launchChatButton" onclick="launchChat()">Contact Support</button>
+
+    </div>
+    
+    <div id="embeddedMessagingContainer" class="chat-modal"></div>
+</main>
