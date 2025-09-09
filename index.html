@@ -100,7 +100,7 @@
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400">&copy; 2025 Agentforce1. All rights reserved.</p>
+                <p class="text-gray-400">&copy; 2025 Agentforce2. All rights reserved.</p>
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="#" class="hover:text-gray-300">Privacy Policy</a>
                     <a href="#" class="hover:text-gray-300">Terms of Service</a>
@@ -110,14 +110,21 @@
     </footer>
 
     <!-- ADDED THE SCRIPT TO LAUNCH THE CHAT -->
-    <script type='text/javascript'>
+   <script type='text/javascript'>
         function launchChat() {
-            // Use a try-catch block to prevent errors if the API isn't ready
-            try {
-                embeddedservice_bootstrap.utilAPI.launchChat();
-            } catch (err) {
-                console.error('Error launching chat: ', err);
-            }
+            embeddedservice_bootstrap.utilAPI.launchChat()
+                .then(() => {
+                    // Success handler: This runs when the chat launches successfully.
+                    console.log('Chat client launched successfully.');
+                    // For example, disable the button to prevent multiple clicks.
+                    document.getElementById('launchChatButton').disabled = true;
+                }).catch((error) => {
+                    // Error handler: This runs if the chat client fails to launch.
+                    console.error('Error launching chat: ', error);
+                }).finally(() => {
+                    // Finally handler: This runs regardless of success or failure.
+                    console.log('Attempted to launch chat.');
+                });
         }
     </script>
 
