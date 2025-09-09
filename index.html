@@ -20,6 +20,8 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			// ADD THIS LINE TO FORCE THE BUTTON TO BE VISIBLE
+			embeddedservice_bootstrap.settings.showChatButtonOnLoad = true;
 
 			embeddedservice_bootstrap.init(
 				'00DGA000009nelv',
