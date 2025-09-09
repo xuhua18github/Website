@@ -16,23 +16,26 @@
  <footer>
  <p>Contact: myemail@example.com</p>
  </footer>
+
  <script type='text/javascript'>
- function initEmbeddedMessaging() {
- try {
- embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
- embeddedservice_bootstrap.init(
- '00DKd000006mBkT',
- 'SDO_Messaging_for_Web',
- 'https://amyerwin-241117-595-demo.my.site.com/ESWSDOMessagingforWeb1731865188511',
- {
- scrt2URL: 'https://amyerwin-241117-595-demo.my.salesforce-scrt.com'
- }
- );
- }
- catch (err) {
- console.error('Error loading Embedded Messaging: ', err);
- }
- };
- </script>
- <script type='text/javascript' src='https://amyerwin-241117-595-demo.my.site.com/ESWSDOMessagingforWeb1731865188511/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DGA000009nelv',
+				'Best_Auto_Service_Agent',
+				'https://huaxu-241209-309-demo.my.site.com/ESWBestAutoServiceAgen1747888067155',
+				{
+					scrt2URL: 'https://huaxu-241209-309-demo.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://huaxu-241209-309-demo.my.site.com/ESWBestAutoServiceAgen1747888067155/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
+
 </body>
