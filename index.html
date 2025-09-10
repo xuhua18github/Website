@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF--8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <title>Agentforce Messaging</title>
   <style>
-    /* Salesforce Lightning Design System (SLDS) Inspired Theme */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: #f3f3f3; /* SLDS background color */
+      /* Background gradient from one.nz */
+      background-image: radial-gradient(101.35% 101.35% at 50% -1.35%, #083A50 0%, #03141E 50.52%, #000000 100%);
       margin: 0;
-      color: #3e3e3e; /* SLDS body text color */
+      color: #f1f1f1; /* Light text color for dark background */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -18,43 +18,37 @@
     }
 
     .container {
-      background: #ffffff;
-      padding: 2rem 2.5rem;
-      border-radius: 0.5rem; /* 8px */
-      border: 1px solid #dddbda; /* SLDS border color */
-      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+      background: #121212; /* Dark card background */
+      padding: 2.5rem;
+      border-radius: 1rem; /* 16px */
+      border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for dark theme */
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
       max-width: 500px;
       width: 90%;
       text-align: center;
     }
     
-    .agent-image {
-      max-width: 100%;
-      height: auto;
-      border-radius: 0.25rem; /* 4px */
+    .robot-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%; /* Makes the image circular */
+      object-fit: cover;
       margin-bottom: 1.5rem;
-      border: 1px solid #dddbda;
+      border: 2px solid rgba(255, 255, 255, 0.1);
     }
 
     h1 {
-      color: #0d0d0d; /* SLDS heading color */
-      font-size: 1.5rem; /* 24px */
+      color: #ffffff; /* White heading color */
+      font-size: 1.75rem; /* 28px */
       font-weight: 600;
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-    }
-    
-    p {
-      font-size: 1rem; /* 16px */
-      line-height: 1.5;
-      margin-bottom: 0;
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon"> 
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
     <h1>OneAssistant Agent</h1>
   </div>
 
