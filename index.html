@@ -7,58 +7,24 @@
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      /* Background gradient from one.nz */
-      background-image: radial-gradient(101.35% 101.35% at 50% -1.35%, #083A50 0%, #03141E 50.52%, #000000 100%);
-      background-attachment: fixed;
+      /* Light green background */
+      background-color: #e8f5e9;
       margin: 0;
-      color: #f1f1f1; /* Light text color for dark background */
-    }
-
-    .top-banner {
-      /* Gradient and pattern from one.nz banner */
-      background-image: url('data:image/svg+xml,%3Csvg width="51" height="50" viewBox="0 0 51 50" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="25.5" cy="25" r="2.5" fill="white" fill-opacity="0.1"/%3E%3Ccircle cx="2.5" cy="25" r="2.5" fill="white" fill-opacity="0.1"/%3E%3Ccircle cx="48.5" cy="25" r="2.5" fill="white" fill-opacity="0.1"/%3E%3C/svg%3E'), linear-gradient(90deg, #84419E 0%, #E30613 100%);
-      color: #ffffff;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    
-    .top-banner p {
-      margin: 0;
-      margin-bottom: 0.75rem;
-    }
-    
-    .banner-button {
-      background: transparent;
-      border: 2px solid #ffffff;
-      color: #ffffff;
-      padding: 0.5rem 1.5rem;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      display: inline-block;
-      transition: background-color 0.2s, color 0.2s;
-    }
-
-    .banner-button:hover {
-      background-color: #ffffff;
-      color: #E30613;
-    }
-
-    .main-content {
+      color: #333; /* Dark text color for light background */
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 4rem 1rem;
+      min-height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
     }
 
     .container {
-      background: #121212; /* Dark card background */
+      background: #ffffff; /* White card background */
       padding: 2.5rem;
       border-radius: 1rem; /* 16px */
-      border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for dark theme */
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+      border: 1px solid #dcdcdc; /* Subtle border for light theme */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       max-width: 500px;
       width: 100%;
       text-align: center;
@@ -70,11 +36,11 @@
       border-radius: 50%; /* Makes the image circular */
       object-fit: cover;
       margin-bottom: 1.5rem;
-      border: 2px solid rgba(255, 255, 255, 0.1);
+      border: 2px solid #f0f0f0;
     }
 
     h1 {
-      color: #ffffff; /* White heading color */
+      color: #181818; /* Dark heading color */
       font-size: 1.75rem; /* 28px */
       font-weight: 600;
       margin: 0;
@@ -83,16 +49,9 @@
 </head>
 <body>
 
-  <div class="top-banner">
-    <p><strong>Get 3 months of Prepay on us.</strong> Grab a $35 Prepay plan, and your 2nd, 3rd and 4th renewals are on us. Online only.</p>
-    <a href="#" class="banner-button">Find out more</a>
-  </div>
-
-  <div class="main-content">
-    <div class="container">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
-      <h1>OneAssistant Agent</h1>
-    </div>
+  <div class="container">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSC_QFbTFMasUfnuKan4pWGlVr4700Fo7_9-w&s" alt="Agentforce Robot" class="robot-icon">
+    <h1>OneAssistant Agent</h1>
   </div>
 
 <script type='text/javascript'>
